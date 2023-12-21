@@ -1,0 +1,7 @@
+# Stream and Buffer
+Dividing data into smaller-smaller chunks and sent it 
+We use 'Buffer' to do that:
+Buffers basically stores those small chunks of data(as various stacks of data)
+e.g. Buffer is like a tap in a water Pipe connected to a water tanker.
+>> In output of terminal you'll see as :
+<Buffer 6d 73 67 3d 64 61 74 61> ; where 6d 73 67 etc are data chunks in the Buffer.
