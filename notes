@@ -5,3 +5,12 @@ Buffers basically stores those small chunks of data(as various stacks of data)
 e.g. Buffer is like a tap in a water Pipe connected to a water tanker.
 >> In output of terminal you'll see as :
 <Buffer 6d 73 67 3d 64 61 74 61> ; where 6d 73 67 etc are data chunks in the Buffer.
+
+
+## express
+we create middleware ;data(req,res,next)=>{.....}
+then this middleware sends it to another middleware; next()
+then that middleware sends the response data; res.send()
+
+# app.use() : helps in passing the middleware function
+>>next is a function provided by express to call other middleware functions
