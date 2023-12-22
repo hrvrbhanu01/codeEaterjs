@@ -40,7 +40,7 @@ const requestHandler=(req,res) => {
 }
 
 
-//module.exports=requestHandler
+module.exports=requestHandler
 
 //OR
 
@@ -56,5 +56,5 @@ const requestHandler=(req,res) => {
 
 //OR
 
-exports.handler=requestHandler
-exports.data="Hello Friends"
+// exports.handler=requestHandler
+// exports.data="Hello Friends"
