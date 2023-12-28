@@ -2,13 +2,13 @@ const express=require("express")
 const router=express.Router()
 
 
-router.get("/abc", (req,res,next) => {
+router.get("/add-course", (req,res,next) => {
     console.log("Middleware-2");
-    res.send('<form action="/course" method="POST"><input type="text" name="title"><button type="submit">Add Course</button></form>'
+    res.send('<form action="/admin/add-course" method="POST"><input type="text" name="title"><button type="submit">Add Course</button></form>'
     );
 })
 
-router.post("/course", (req,res,next) => {
+router.post("/add-course", (req,res,next) => {
     console.log(req.body);
     res.redirect("/")
 })
