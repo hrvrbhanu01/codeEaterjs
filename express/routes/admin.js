@@ -1,11 +1,10 @@
 const express=require("express")
+const path=require('path')
 const router=express.Router()
 
 
 router.get("/add-course", (req,res,next) => {
-    console.log("Middleware-2");
-    res.send('<form action="/admin/add-course" method="POST"><input type="text" name="title"><button type="submit">Add Course</button></form>'
-    );
+    res.sendFile(path.join(__dirname, "../", "files", "add-course.html"))
 })
 
 router.post("/add-course", (req,res,next) => {

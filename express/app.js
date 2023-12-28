@@ -1,5 +1,6 @@
 const http=require('http')
 const express = require('express')
+const path=require('path')
 const bodyParser=require("body-parser")
 
 const app=express() //request handler
@@ -9,7 +10,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 app.use('/admin', adminRoutes)
-app.use(courseRoutes)  //if these two middlewares are unable to resolve the request then it will come to this below app.use :-
+app.use(courseRoutes)           //if these two middlewares are unable to resolve the request then it will come to this below app.use :-
+
+app.use(express.static(path.join(__dirname, "public")))
+
 app.use((req,res,next) => {
     res.status(404).send('<h1>Page Not Found</h1>')
 })
